@@ -7,7 +7,7 @@ function onSubmitForm() {
         file: selectedFile
     };
     var http = new XMLHttpRequest();
-    http.open('POST', 'https://mail-services-rosy.vercel.app/api/email/', true);
+    http.open('POST', 'https://mail-service-nu.vercel.app/api/email/', true);
     http.setRequestHeader("Accept", "application/json");
     http.setRequestHeader("Content-type", "application/json");
     http.onreadystatechange = function () {
