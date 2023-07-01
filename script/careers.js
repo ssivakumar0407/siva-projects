@@ -10,9 +10,9 @@ function onSubmitForm() {
     http.open('POST', 'https://mail-service-nu.vercel.app/api/email/', true);
     http.setRequestHeader("Accept", "application/json");
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function () {
+    http.onreadystatechange = function (evt) {
         if (this.readyState === this.DONE && this.status === 200) {
-            // success response
+            alert(JSON.parse(evt.target.response).message);
         }
     };
     http.send(JSON.stringify(formDetails));
@@ -25,11 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
     fileInput.onchange = () => {
         selectedFile = [];
         for (var a = 0; a < fileInput.files.length; a++) {
+            var fileDetails = {
+                name: fileInput.files[a].name,
+                type: fileInput.files[a].type,
+            };
             var reader = new FileReader();
             reader.onload = (evt) => {
-                selectedFile.push(evt.target.result);
+                fileDetails.contentString = evt.target.result;
+                selectedFile.push(fileDetails);
             };
-            reader.readAsText(fileInput.files[a]);
+            reader.readAsDataURL(fileInput.files[a]);
         }
     }
 });
