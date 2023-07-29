@@ -45,7 +45,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-	<script src="script/careers.js"></script>
 </head>
 
 <body>
@@ -139,30 +138,40 @@
                         <form class="careers-form">
                             <div class="row g-3">
                                 <div class="position-relative col-xl-12">
-									<label for="YourName" class="m-1 text-white" >Full name</label>
-                                    <input type="text" class="cus-name position-relative form-control bg-light border-0" required id="Your Name" name="name" style="height: 55px;">
+                                    <label for="YourName" class="m-1 text-white">Full name<span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="cus-name position-relative form-control bg-light border-0"
+                                        required id="Your Name" name="name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-									<label for="Your Email" class="m-1 text-white">Email</label>
-                                    <input type="email" class="cus-email form-control bg-light border-0" required id="Your Email" name="email" style="height: 55px;">
+                                    <label for="Your Email" class="m-1 text-white">Email<span
+                                            style="color: red;">*</span></label>
+                                    <input type="email" class="cus-email form-control bg-light border-0" required
+                                        id="Your Email" name="email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-									<label for="Phone" class="m-1 text-white">Phone</label>
-                                    <input type="tel" class="cus-phone form-control bg-light border-0" required id="Phone" name="phone" style="height: 55px;" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                                    <label for="Phone" class="m-1 text-white">Phone<span
+                                            style="color: red;">*</span></label>
+                                    <input type="tel" class="cus-phone form-control bg-light border-0" required
+                                        id="Phone" name="phone" style="height: 55px;"
+                                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
                                 </div>
                                 <div class="col-12">
-									<label for="How can we help?" class="m-1 text-white">How can we help?</label>
-                                    <textarea class="cus-msg form-control bg-light border-0" required rows="3" id="Message" name="message"></textarea>
+                                    <label for="How can we help?" class="m-1 text-white">How can we help?<span
+                                            style="color: red;">*</span></label>
+                                    <textarea class="cus-msg form-control bg-light border-0" required rows="3"
+                                        id="Message" name="message"></textarea>
                                 </div>
-								<div class="col-12">
-								
-								<label for=" How can we help?" class="mb-3 text-white" required>Attach your CV</label><br>
-								
-								<input class="cus-atc mb-2 text-white" id="file" name="file" type="file" />
-								
-								</div>
                                 <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="button" onclick="onSubmitForm()">Submit</button>
+
+                                    <label for=" How can we help?" class="mb-3 text-white" required>Attach your
+                                        CV<span style="color: red;">*</span></label><br>
+
+                                    <input class="cus-atc mb-2 text-white" id="file" name="file" type="file" required />
+
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -276,7 +285,7 @@ ensure that your document shines with clarity, professionalism, and accuracy.</p
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -286,6 +295,7 @@ ensure that your document shines with clarity, professionalism, and accuracy.</p
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="script/careers.js"></script>
 </body>
 
 </html>
