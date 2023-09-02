@@ -18,7 +18,8 @@ $(document).ready(function () {
         }
     };
 
-    $(".careers-form").submit(function () {
+    $(".careers-form").submit(function (e) {
+        e.preventDefault();
         var formDetails = {
             name: document.querySelector('.careers-form .cus-name').value,
             email: document.querySelector('.careers-form .cus-email').value,
@@ -33,6 +34,7 @@ $(document).ready(function () {
         http.onreadystatechange = function (evt) {
             if (this.readyState === this.DONE && this.status === 200) {
                 alert(JSON.parse(evt.target.response).message);
+                $(".careers-form").get(0).reset();
             }
         };
         http.send(JSON.stringify(formDetails));
